@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Atividade2 {
+
+public static void main (String[] args) { 
+
+    Scanner leitor = new Scanner(System.in);
+
+// variavel constante
+final String senha = "senha";
+
+// variavel de entrada
+int tentativa = 0;
+String tentativaSenha;
+
+// criando a leitura
+System.out.print("Digite a senha: ");
+tentativaSenha = leitor.next();
+
+// (Faça) verificando se a senha digitada é igual a constante.
+do{
+if (senha.equals(tentativaSenha)){
+    System.out.print("Senha correta seu fela\n");
+
+} else {
+    System.out.print("Senha incorreta seu fela\n");
+
+    System.out.print("Digite a senha: ");
+    tentativaSenha = leitor.next();
+
+    tentativa += 1; // caso a senha for incorreta, pode ser usada 3 vzs,
+    
+}
+}while ((tentativa < 3));
+
+// Fecha o scanner
+leitor.close();
+
+ }
+}
